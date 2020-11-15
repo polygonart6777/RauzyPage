@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <!-- <svg width="960" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript" src="graph.js"></script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rauzy Fractal Experiment</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="rauzyFractal.css"
+      media="screen"
+    />
+    <script src="math.js" type="text/javascript"></script>
+    <script src="plotly-latest.min.js" type="text/javascript"></script>
+  </head>
+  <body onload="spinnerOff()">
+    <div id="graphImage">
+      <img src="graph.png" alt="tribonacci graph" width="300" height="300" />
+    </div>
+
+    <div id="loader"></div>
+    <p>
+      Enter a point from &#8484;<sup><sup>3 </sup></sup> &nbsp;for each edge by
+      using the form &nbsp;
+      <span style="background-color: #e6e6e6; font-style: italic">
+        <code>z,z,z</code> </span
+      >&nbsp; where <i> &nbsp;z &nbsp;</i> is an integer within each of the
+      input fields below. Be careful with &nbsp; <i> Path Length</i>, 13 is
+      suggested, but anything above 15 takes a bit longer.
+    </p>
+    <form id="inputs">
+      <div class="wrapper">
+        <div>
+          <label for="e1">edge 1</label>
+          <input
+            type="text"
+            id="e1"
+            name="e1"
+            required
+            placeholder="0,0,0"
+            pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
+          />
+        </div>
+
+        <div>
+          <label for="e2">edge 2</label>
+          <input
+            type="text"
+            name="edge-2"
+            id="e2"
+            required
+            placeholder="0,0,0"
+            pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
+          />
+        </div>
+        <div>
+          <label for="e3">edge 3</label>
+          <input
+            type="text"
+            name="edge-3"
+            id="e3"
+            required
+            placeholder="0,0,0"
+            pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
+          />
+        </div>
+        <div>
+          <label for="e4">edge 4</label>
+          <input
+            type="text"
+            name="edge-4"
+            id="e4"
+            required
+            placeholder="1,0,0"
+            pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
+          />
+        </div>
+        <div>
+          <label for="e5">edge 5</label>
+          <input
+            type="text"
+            name="edge-5"
+            id="e5"
+            required
+            placeholder="1,0,0"
+            pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
+          />
+        </div>
+        <div>
+          <label for="pathL">Path Length (1-17)</label>
+          <input
+            type="text"
+            name="pathL"
+            id="pathL"
+            required
+            placeholder="13"
+            pattern="^[0-1]?[1-7]$"
+          />
+        </div>
+      </div>
+      <div id="button">
+        <button type="submit">Submit form</button>
+      </div>
+    </form>
+    <div>
+      <div id="plotContainer">
+        <div class="container">
+          <div id="plot2d"></div>
+          <div id="plot3d"></div>
+        </div>
+      </div>
+      <script type="text/javascript" src="logic.js"></script>
+    </div>
+  </body>
+</html>

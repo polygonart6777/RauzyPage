@@ -1,0 +1,197 @@
+#graphImage,
+#plot2d,
+#plot3d,
+#button,
+#plotContainer,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+#plot2d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  height: 650px;
+  margin-top: 2rem;
+}
+
+#plot3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 575x;
+  height: 575px;
+  margin-top: 6rem;
+}
+
+#button {
+  padding: 2rem 0 0 0.25rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  margin-left: 0;
+  grid-template-columns: repeat(2, 650px);
+}
+
+label {
+  display: block;
+  text-align: left;
+  padding: 0 0 0.5em 0.25em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #e184f3;
+  background-color: #c123de;
+  border-radius: 6px;
+  border: 1px solid #a511c0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 8px 24px;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #a20dbd;
+  border: 1px solid #a511c0;
+  transform: scale(1.05);
+}
+button:active {
+  position: relative;
+  border: 1px solid #a511c0;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  border: 1px solid #a511c0;
+}
+
+input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #61c5fa;
+  border: 1px solid #5ab0db;
+}
+
+input[type="text"]:hover {
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus:hover {
+  outline: none;
+  box-shadow: 0px 0px 5px #61c5fa;
+  border: 1px solid #5ab0db;
+  border-radius: 0;
+}
+
+input:invalid {
+  outline: red;
+  box-shadow: 0px 0px 5px red;
+  border: 1px solid red;
+  border-radius: 0;
+}
+
+input:invalid:focus {
+  outline: red;
+  box-shadow: 0px 0px 5px red;
+  border: 1px solid red;
+  border-radius: 0;
+}
+
+input:required:invalid {
+  border-color: red;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 75px;
+  height: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
