@@ -27,7 +27,7 @@
       <span style="background-color: #e6e6e6; font-style: italic">
         <code>z,z,z</code> </span
       >&nbsp; where <i> &nbsp;z &nbsp;</i> is an integer within each of the
-      input fields below. Be careful with &nbsp; <i> Path Length</i>, 13 is
+      input fields below. Be careful with &nbsp; <i> Detail</i>, 13 is
       suggested, but anything above 15 takes a bit longer.
     </p>
     <form id="inputs">
@@ -39,7 +39,7 @@
             id="e1"
             name="e1"
             required
-            placeholder="0,0,0"
+            value="0,0,0"
             pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
           />
         </div>
@@ -51,7 +51,7 @@
             name="edge-2"
             id="e2"
             required
-            placeholder="0,0,0"
+            value="0,0,0"
             pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
           />
         </div>
@@ -62,7 +62,7 @@
             name="edge-3"
             id="e3"
             required
-            placeholder="0,0,0"
+            value="0,0,0"
             pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
           />
         </div>
@@ -73,7 +73,7 @@
             name="edge-4"
             id="e4"
             required
-            placeholder="1,0,0"
+            value="1,0,0"
             pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
           />
         </div>
@@ -84,18 +84,18 @@
             name="edge-5"
             id="e5"
             required
-            placeholder="1,0,0"
+            value="1,0,0"
             pattern="-?[0-9]+,-?[0-9]+,-?[0-9]+"
           />
         </div>
         <div>
-          <label for="pathL">Path Length (1-17)</label>
+          <label for="pathL">Detail (1-17)</label>
           <input
             type="text"
             name="pathL"
             id="pathL"
             required
-            placeholder="13"
+            value="14"
             pattern="^[0-1]?[0-7]$"
           />
         </div>
