@@ -159,15 +159,10 @@ function relabelPaths(paths, labels) {
 }
 
 function matrixSumBackward(labeledPaths) {
-  const b = [
-    [1, 1, 1],
-    [1, 0, 0],
-    [0, 1, 0],
-  ];
   const sums = [];
   labeledPaths.forEach((path) => {
     path.forEach((edge, index) => {
-      path[index] = math.multiply(math.pow(b, index), edge);
+      path[index] = math.multiply(matrixPowers[index], edge);
     });
     let sumTotal = path.reduce((edgeA, edgeB) => math.add(edgeA, edgeB), 0);
     sums.push(sumTotal);
